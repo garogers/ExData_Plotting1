@@ -9,5 +9,5 @@ plot_data$Date <- as.Date(plot_data$Date, format = "%d/%m/%Y")
 hist(plot_data$Global_active_power, main = "Global Active Power",
          xlab = "Global Active Power (kilowatts)", ylab = "Frequency", col = "red")
 
-png("plot1.png", width=480, height=480)
+dev.copy(png, file="plot1.png", height=480, width=480)
 dev.off()
